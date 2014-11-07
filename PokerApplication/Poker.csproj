@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="InputController.cs" />
     <Compile Include="OutputController.cs" />
-    <Compile Include="PokerBizCore.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Evaluator.cs" />
+    <Compile Include="PokerDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,5 +1,4 @@
 D:\GitHub\Poker\PokerApplication\bin\Debug\ConsoleApplication1.exe.config
-D:\GitHub\Poker\PokerApplication\obj\Debug\Poker.csprojResolveAssemblyReference.cache
 D:\GitHub\Poker\PokerApplication\bin\Debug\ConsoleApplication1.exe
 D:\GitHub\Poker\PokerApplication\bin\Debug\ConsoleApplication1.pdb
 D:\GitHub\Poker\PokerApplication\obj\Debug\ConsoleApplication1.exe

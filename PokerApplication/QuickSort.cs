@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PokerApplication
 {
-    class PokerBizCore
+    class QuickSort
     {
-
         public static void Sort(int[] numbers)
         {
             Sort(numbers, 0, numbers.Length - 1);
@@ -57,7 +56,6 @@ namespace PokerApplication
             numbers[j] = numbers[i] - numbers[j];
             numbers[i] = numbers[i] - numbers[j];
         }
-
 
     }
 }

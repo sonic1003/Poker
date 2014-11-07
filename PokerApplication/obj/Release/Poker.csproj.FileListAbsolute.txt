@@ -1,0 +1,5 @@
+D:\GitHub\Poker\PokerApplication\bin\Release\ConsoleApplication1.exe.config
+D:\GitHub\Poker\PokerApplication\bin\Release\ConsoleApplication1.exe
+D:\GitHub\Poker\PokerApplication\bin\Release\ConsoleApplication1.pdb
+D:\GitHub\Poker\PokerApplication\obj\Release\ConsoleApplication1.exe
+D:\GitHub\Poker\PokerApplication\obj\Release\ConsoleApplication1.pdb

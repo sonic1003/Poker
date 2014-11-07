@@ -9,13 +9,23 @@ namespace PokerApplication
 
     public class Card
     {
-        private Value _value;
-        private Suit _suit;
+        private int _point;
+        private int _suit;
 
-        public Card (Value value, Suit suit)
+        public Card (int point, int suit)
         {
-            _value = value;
+            _point = point;
             _suit = suit;
+        }
+
+        public int Point
+        {
+            get { return _point; }
+        }
+
+        public int Suit
+        {
+            get { return _suit; }
         }
     }
 }
