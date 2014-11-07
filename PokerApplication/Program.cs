@@ -10,10 +10,11 @@ namespace PokerApplication
     class Program
     {
 
-
         static void Main(string[] args)
         {
-            for (int n = 0; n < 100; ++n)
+            Stack<int> st = new Stack<int>();
+
+            for (int n = 0; n < 1; ++n)
             {
                 Stopwatch sp = new Stopwatch();
                 Random num = new Random();
@@ -53,6 +54,7 @@ namespace PokerApplication
                 sp.Stop();
                 Console.WriteLine(sp.ElapsedMilliseconds + " , " + sp.ElapsedTicks);
 
+            
 
                 Console.WriteLine("\n-------------------------\n");
             }

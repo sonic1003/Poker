@@ -40,11 +40,22 @@ namespace PokerApplication
             }
         }
 
-        private static void Swap(int[] numbers, int i, int j)
+
+
+        //save cpu than space
+        public static void Swap(int[] numbers, int i, int j)
         {
             int number = numbers[i];
             numbers[i] = numbers[j];
             numbers[j] = number;
+        }
+
+        //save space than cpu
+        public static void Swap1(int[] numbers, int i, int j)
+        {
+            numbers[i] = numbers[i] + numbers[j];
+            numbers[j] = numbers[i] - numbers[j];
+            numbers[i] = numbers[i] - numbers[j];
         }
 
 
