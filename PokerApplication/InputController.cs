@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PokerApplication
 {
@@ -10,14 +9,14 @@ namespace PokerApplication
     {
         Card[] cards = new Card[5];
 
-        int[][] inputArray = new int[][] 
-            {
-                new int[]{2,2}, 
-                new int[]{9,2},
-                new int[]{11,2},
-                new int[]{13,2},
-                new int[]{5,2}
-            };
+        int[][] inputArray = new int[][]
+        {
+            new int[]{ 2, 2 }, 
+            new int[]{ 9, 2 },
+            new int[]{ 11, 2 },
+            new int[]{ 13, 2 },
+            new int[]{ 5, 2 }
+        };
 
         public Card[] GetUserInput()
         {

@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="31" Column="27" />
-      <File FileName="QuickSort.cs" Line="3" Column="19" />
       <File FileName="Card.cs" Line="1" Column="1" />
       <File FileName="Enums.cs" Line="1" Column="1" />
+      <File FileName="OutputController.cs" Line="1" Column="1" />
+      <File FileName="PokerBizCore.cs" Line="20" Column="20" />
+      <File FileName="Program.cs" Line="28" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

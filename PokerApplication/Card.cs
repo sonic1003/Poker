@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PokerApplication
 {
@@ -12,7 +11,7 @@ namespace PokerApplication
         private int _point;
         private int _suit;
 
-        public Card (int point, int suit)
+        public Card(int point, int suit)
         {
             _point = point;
             _suit = suit;
