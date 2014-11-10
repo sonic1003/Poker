@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using System.Diagnostics;
 
 namespace PokerApplication
@@ -16,20 +15,36 @@ namespace PokerApplication
             st.Reset();
             st.Start();
 
+            int[][] inputArray1 = new int[][]
+            {
+                new int[]{ 2, 2 }, 
+                new int[]{ 6, 0 },
+                new int[]{ 8, 1 },
+                new int[]{ 13, 3 },
+                new int[]{ 10, 2 }
+            };
+
+            int[][] inputArray2 = new int[][]
+            {
+                new int[]{ 9, 1 }, 
+                new int[]{ 11, 3 },
+                new int[]{ 12, 0 },
+                new int[]{ 13, 2 },
+                new int[]{ 2, 3 }
+            };
+
             InputController input = new InputController();
-            Card[] cards = input.GetUserInput();
-            
-            Evaluator mediator = new Evaluator();
-            mediator.InitializeCards(cards);
+            Card[] cards1 = input.ProcessUserInput(inputArray1);
+            Card[] cards2 = input.ProcessUserInput(inputArray2);
 
-
-            Console.WriteLine(mediator.HasFlush());
+            PokerController pokerController = new PokerController();
+            pokerController.CompareHands(cards1, cards2);
 
             st.Stop();
             Console.WriteLine(st.ElapsedMilliseconds + " " + st.ElapsedTicks);
 
 
-
+            /*
             st.Reset();
             st.Start();
             for (int i = 0; i < 10000; i++)
@@ -51,7 +66,7 @@ namespace PokerApplication
             }
             st.Stop();
             Console.WriteLine(st.ElapsedMilliseconds + " " + st.ElapsedTicks);
-
+            */
         }
             
     }

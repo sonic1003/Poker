@@ -7,8 +7,8 @@
     <ProjectGuid>{299C9A35-85E9-4E00-AA78-29E709F703FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
-    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <RootNamespace>PokerApplication</RootNamespace>
+    <AssemblyName>PokerApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,6 +47,7 @@
     <Compile Include="OutputController.cs" />
     <Compile Include="Evaluator.cs" />
     <Compile Include="PokerDemo.cs" />
+    <Compile Include="PokerController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickSort.cs" />
   </ItemGroup>
