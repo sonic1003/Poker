@@ -4,6 +4,9 @@ Run this project in Visual Studio 2013 IDE.
 
 Note:Monodevelop's internal console on Mac/Linux will throw out errors (due to Console.ReadLine), instead, run compiled exe file directly, or configure an external terminal.
 
+
+Usage:
+====
 Input should be 5 cards for each player.
 
 Enter each card like this "5-0"
