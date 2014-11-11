@@ -1,6 +1,0 @@
-D:\GitHub\Poker\PokerApplication\bin\Debug\PokerApplication.exe.config
-D:\GitHub\Poker\PokerApplication\bin\Debug\PokerApplication.exe
-D:\GitHub\Poker\PokerApplication\bin\Debug\PokerApplication.pdb
-D:\GitHub\Poker\PokerApplication\obj\Debug\PokerApplication.exe
-D:\GitHub\Poker\PokerApplication\obj\Debug\PokerApplication.pdb
-D:\GitHub\Poker\PokerApplication\obj\Debug\Poker.csprojResolveAssemblyReference.cache
