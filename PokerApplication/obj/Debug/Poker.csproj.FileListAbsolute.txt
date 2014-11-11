@@ -1,0 +1,1 @@
+D:\GitHub\Poker\PokerApplication\bin\Debug\PokerApplication.exe.config
