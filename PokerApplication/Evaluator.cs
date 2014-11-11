@@ -39,7 +39,7 @@ namespace PokerApplication
         /// <returns></returns>
         public RankLevel HasStraight()
         {
-            string result = string.Join("",points.ToArray());
+            string result = string.Join("", points.ToArray());
             string templateString1 = "1234567891011121314";
             string templateString2 = "234514";
 
@@ -75,12 +75,14 @@ namespace PokerApplication
             int num = 0;
             int result = 0;
             List<int> distinctPoints = points.Distinct().ToList();
-            int[] tmp = new int[2];
-            
 
+            
+            cardIndex.Clear();
             foreach (int point in distinctPoints)
             {
+                int[] tmp = new int[2];
                 num = points.Count(n => n.Equals(point));
+                Console.WriteLine(num + " " + point);
                 switch (num)
                 {
                     case 4:
@@ -105,10 +107,16 @@ namespace PokerApplication
                         result += 0;
                         tmp[0] = 0;
                         tmp[1] = point;
+                        Console.WriteLine("result " + tmp[0] + " " + tmp[1]);
                         cardIndex.Add(tmp);
                         break;
                 }
             }
+            foreach (int[] obj in cardIndex)
+            {
+                Console.Write(obj[0] + " " + obj[1] + ",  ");
+            }
+            Console.WriteLine();
             //make sure high rank is in front
             QuickSort.Sort(cardIndex);
             return (RankLevel)result;

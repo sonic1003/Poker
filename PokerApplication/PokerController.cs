@@ -15,7 +15,7 @@ namespace PokerApplication
             cardsEvaluator1 = InstantiateEvaluator(cards1);
             cardsEvaluator2 = InstantiateEvaluator(cards2);
 
-            if(cardsEvaluator1.ConvertListToString() == cardsEvaluator2.ConvertListToString())
+            if (cardsEvaluator1.ConvertListToString() == cardsEvaluator2.ConvertListToString())
             {
                 //Console.WriteLine("Draw");
                 FinalVerdict = -1;
@@ -31,10 +31,9 @@ namespace PokerApplication
                 if (cardsResult1 == RankLevel.STRAIGHT_FLUSH ||
                     cardsResult1 == RankLevel.STRAIGHT ||
                     cardsResult1 == RankLevel.FLUSH ||
-                    cardsResult1 == RankLevel.HIGH_CARD
-                  )
+                    cardsResult1 == RankLevel.HIGH_CARD)
                 {// no duplicated cards
-                 // compare high cards
+                    // compare high cards
 
                     for (int i = cardsEvaluator1.points.Count - 1; i >= 0; i--)
                     {
@@ -139,7 +138,7 @@ namespace PokerApplication
         {
             RankLevel result = 0;
             result = evaluator.HasStraight() | evaluator.HasFlush();
-            if (result != 0) 
+            if (result != 0)
                 return result;
             else
                 return evaluator.HasDuplicatedCards();

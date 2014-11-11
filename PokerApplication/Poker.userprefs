@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokerDemo.cs">
     <Files>
-      <File FileName="Card.cs" Line="1" Column="1" />
-      <File FileName="Enums.cs" Line="1" Column="1" />
-      <File FileName="OutputController.cs" Line="1" Column="1" />
-      <File FileName="PokerBizCore.cs" Line="20" Column="20" />
-      <File FileName="Program.cs" Line="28" Column="28" />
+      <File FileName="PokerDemo.cs" Line="13" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
