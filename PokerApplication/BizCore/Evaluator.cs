@@ -73,7 +73,7 @@ namespace PokerApplication
         public RankLevel HasDuplicatedCards()
         {
             int num = 0;
-            RankLevel result = 0;
+            int result = 0;
             List<int> distinctPoints = points.Distinct().ToList();
             int[] tmp = new int[2];
             
@@ -84,25 +84,25 @@ namespace PokerApplication
                 switch (num)
                 {
                     case 4:
-                        result |= RankLevel.FOUR_OF_A_KIND;
-                        tmp[0] = (int)RankLevel.FOUR_OF_A_KIND;
+                        result += (int)RankLevel.FOUR_OF_A_KIND;
+                        tmp[0] = result;
                         tmp[1] = point;
                         cardIndex.Add(tmp);
                         break;
                     case 3:
-                        result |= RankLevel.THREE_OF_A_KIND;
-                        tmp[0] = (int)RankLevel.THREE_OF_A_KIND;
+                        result += (int)RankLevel.THREE_OF_A_KIND;
+                        tmp[0] = result;
                         tmp[1] = point;
                         cardIndex.Add(tmp);
                         break;
                     case 2:
-                        result |= RankLevel.ONE_PAIR;
-                        tmp[0] = (int)RankLevel.ONE_PAIR;
+                        result += (int)RankLevel.ONE_PAIR;
+                        tmp[0] = result;
                         tmp[1] = point;
                         cardIndex.Add(tmp);
                         break;
                     default:
-                        result |= 0;
+                        result += 0;
                         tmp[0] = 0;
                         tmp[1] = point;
                         cardIndex.Add(tmp);
@@ -111,7 +111,7 @@ namespace PokerApplication
             }
             //make sure high rank is in front
             QuickSort.Sort(cardIndex);
-            return result;
+            return (RankLevel)result;
         }
     }
 }

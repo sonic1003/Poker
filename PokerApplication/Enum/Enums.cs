@@ -34,12 +34,12 @@ namespace PokerApplication
     {
         HIGH_CARD = 0,
         ONE_PAIR = 20,
-        TWO_PAIR = ONE_PAIR | ONE_PAIR,       //40 equals ONE_PAIR + ONE_PAIR
+        TWO_PAIR = 40,       //40 equals ONE_PAIR + ONE_PAIR
         THREE_OF_A_KIND =50,
         STRAIGHT = 55 ,
         FLUSH = 65,
-        FULL_HOUSE = THREE_OF_A_KIND | ONE_PAIR,     //70 equals THREE_OF_A_KIND + TWO_PAIRS
+        FULL_HOUSE = 70,     //70 equals THREE_OF_A_KIND + TWO_PAIRS
         FOUR_OF_A_KIND = 100,
-        STRAIGHT_FLUSH = STRAIGHT | FLUSH, // 120 equals STRAIGHT + FLUSH
+        STRAIGHT_FLUSH = 120, // 120 equals STRAIGHT + FLUSH
     }
 }
