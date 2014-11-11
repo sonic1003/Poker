@@ -17,5 +17,17 @@ namespace PokerApplication
             }
             return cards;
         }
+
+        public int[][] ReadInputAsArray(int[][] inputArray)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                string inputCard = Console.ReadLine();
+                inputArray[i] = new int[2];
+                inputArray[i][0] = int.Parse(inputCard.Split('-')[0]);
+                inputArray[i][1] = int.Parse(inputCard.Split('-')[1]);
+            }
+            return inputArray;
+        }
     }
 }

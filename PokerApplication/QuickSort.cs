@@ -7,24 +7,24 @@ namespace PokerApplication
 {
     class QuickSort
     {
-        public static void Sort(int[] numbers)
+        public static void Sort(List<int[]> numbers)
         {
-            Sort(numbers, 0, numbers.Length - 1);
+            Sort(numbers, 0, numbers.Count - 1);
         }
 
-        private static void Sort(int[] numbers, int left, int right)
+        private static void Sort(List<int[]> numbers, int left, int right)
         {
             if (left < right)
             {
-                int middle = numbers[(left + right) / 2];
+                int middle = numbers[(left + right) / 2][0];
                 int i = left - 1;
                 int j = right + 1;
                 while (true)
                 {
-                    while (numbers[++i] < middle)
+                    while (numbers[++i][0] < middle)
                         ;
 
-                    while (numbers[--j] > middle)
+                    while (numbers[--j][0] > middle)
                         ;
 
                     if (i >= j)
@@ -39,21 +39,11 @@ namespace PokerApplication
         }
 
 
-
-        //save cpu than space
-        public static void Swap(int[] numbers, int i, int j)
+        public static void Swap(List<int[]> numbers, int i, int j)
         {
-            int number = numbers[i];
-            numbers[i] = numbers[j];
-            numbers[j] = number;
-        }
-
-        //save space than cpu
-        public static void Swap1(int[] numbers, int i, int j)
-        {
-            numbers[i] = numbers[i] + numbers[j];
-            numbers[j] = numbers[i] - numbers[j];
-            numbers[i] = numbers[i] - numbers[j];
+            int number = numbers[i][0];
+            numbers[i][0] = numbers[j][0];
+            numbers[j][0] = number;
         }
 
     }

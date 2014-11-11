@@ -9,7 +9,7 @@ namespace PokerApplication
     {
         public List<int> suits = new List<int>();
         public List<int> points = new List<int>();
-        public Dictionary<RankLevel, int> cardIndex = new Dictionary<RankLevel, int>();
+        public List<int[]> cardIndex = new List<int[]>();
 
         /// <summary>
         /// store card Point and Suit in two lists.
@@ -75,6 +75,8 @@ namespace PokerApplication
             int num = 0;
             RankLevel result = 0;
             List<int> distinctPoints = points.Distinct().ToList();
+            int[] tmp = new int[2];
+            
 
             foreach (int point in distinctPoints)
             {
@@ -83,53 +85,33 @@ namespace PokerApplication
                 {
                     case 4:
                         result |= RankLevel.FOUR_OF_A_KIND;
-                        cardIndex[RankLevel.FOUR_OF_A_KIND]=point;
+                        tmp[0] = (int)RankLevel.FOUR_OF_A_KIND;
+                        tmp[1] = point;
+                        cardIndex.Add(tmp);
                         break;
                     case 3:
                         result |= RankLevel.THREE_OF_A_KIND;
-                        cardIndex[RankLevel.THREE_OF_A_KIND] = point;
+                        tmp[0] = (int)RankLevel.THREE_OF_A_KIND;
+                        tmp[1] = point;
+                        cardIndex.Add(tmp);
                         break;
                     case 2:
                         result |= RankLevel.ONE_PAIR;
-                        cardIndex[RankLevel.ONE_PAIR] = point;
+                        tmp[0] = (int)RankLevel.ONE_PAIR;
+                        tmp[1] = point;
+                        cardIndex.Add(tmp);
                         break;
                     default:
                         result |= 0;
+                        tmp[0] = 0;
+                        tmp[1] = point;
+                        cardIndex.Add(tmp);
                         break;
                 }
             }
-
             //make sure high rank is in front
-            cardIndex=SortCardIndex(cardIndex);
-
+            QuickSort.Sort(cardIndex);
             return result;
-        }
-
-
-
-        /// <summary>
-        /// Sort dictionary from High Rank to Low Rank
-        /// </summary>
-        Dictionary<RankLevel, int> SortCardIndex(Dictionary<RankLevel, int> dict)
-        {
-            List<int> rankOrder = new List<int>();
-            foreach (RankLevel rank in dict.Keys)
-            {
-                rankOrder.Add((int)rank);
-            }
-
-            rankOrder.Sort();
-
-            Dictionary<RankLevel, int> tmpDict = new Dictionary<RankLevel, int>();
-            for (int i = rankOrder.Count - 1; i >= 0; i--)
-            {
-                RankLevel level = (RankLevel)rankOrder[i];
-                tmpDict[level] = dict[level];
-            }
-
-            dict.Clear();
-            dict = tmpDict;
-            return dict;
         }
     }
 }

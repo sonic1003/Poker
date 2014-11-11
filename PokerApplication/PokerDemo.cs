@@ -10,39 +10,41 @@ namespace PokerApplication
 
         static void Main(string[] args)
         {
+            /*
             Random random = new Random();
             Stopwatch st = new Stopwatch();
             st.Reset();
             st.Start();
+            */
 
-            int[][] inputArray1 = new int[][]
-            {
-                new int[]{ 2, 2 }, 
-                new int[]{ 6, 0 },
-                new int[]{ 8, 1 },
-                new int[]{ 13, 3 },
-                new int[]{ 10, 2 }
-            };
-
-            int[][] inputArray2 = new int[][]
-            {
-                new int[]{ 9, 1 }, 
-                new int[]{ 11, 3 },
-                new int[]{ 12, 0 },
-                new int[]{ 13, 2 },
-                new int[]{ 2, 3 }
-            };
+            Console.WriteLine("Please input 5 cards of first player.");
+            Console.WriteLine("Valid input will be points from 2 to 14 (2-A respectively)");
+            Console.WriteLine("and suits from 0-3 (stands for spade, heart, diamond, club respectively).");
+            Console.WriteLine("For example, input 12-0 means spade Q.");
+            Console.WriteLine("Press enter after input each card.\n");
+            Console.WriteLine("Please enter the first 5 cards now:");
 
             InputController input = new InputController();
-            Card[] cards1 = input.ProcessUserInput(inputArray1);
-            Card[] cards2 = input.ProcessUserInput(inputArray2);
+
+            int[][] inputArray1 = new int[5][];
+            input.ReadInputAsArray(inputArray1);
+
+            Console.WriteLine("\n");
+            Console.WriteLine("Please enter the second 5 cards now:");
+
+            int[][] inputArray2 = new int[5][];
+            input.ReadInputAsArray(inputArray2);
+            
 
             PokerController pokerController = new PokerController();
-            pokerController.CompareHands(cards1, cards2);
+            pokerController.GetInput(inputArray1,inputArray2);
+            pokerController.CompareHands();
+            pokerController.DisplayResult();
 
+            /*
             st.Stop();
             Console.WriteLine(st.ElapsedMilliseconds + " " + st.ElapsedTicks);
-
+            */
 
             /*
             st.Reset();
